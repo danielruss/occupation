@@ -1,0 +1,40 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "occ": "https://danielruss.github.io/occupation.jsonld#"
+    },
+    "@graph": [
+        {
+            "@id": "training-data",
+            "@type": "occ:studyType",
+            "rdfs:label": "training data",
+            "occ:jobs": [
+                {
+                    "@id": "occ:job1",
+                    "@type": "occ:jobType",
+                    "occ:jobTitle": "software engineer",
+                    "occ:jobTask": "Developer software applications",
+                    "occ:codes": [
+                        {
+                            "@id": "occ:job1code1",
+                            "@type": "occ:codeType",
+                            "occ:code": "11-1111",
+                            "occ:codeTitle": "ding dong developer",
+                            "occ:codingSystem": "US SOC201x",
+                            "occ:score": 0.123,
+                            "occ:coder": "madeup"
+                        },
+                        {
+                            "@id": "occ:job1code2",
+                            "@type": "occ:codeType",
+                            "occ:code": "11-1112",
+                            "occ:codeTitle": "another ding dong developer",
+                            "occ:codingSystem": "US SOC201x"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

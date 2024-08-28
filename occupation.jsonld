@@ -1,0 +1,80 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "occ": "https://danielruss.github.io/occupation.jsonld#"
+    },
+    "@graph": [
+        {
+            "@id": "occ:studyType",
+            "@type": "rdfs:Class",
+            "rdfs:label": "study"
+        },
+        {
+            "@id": "occ:jobType",
+            "@type": "rdfs:Class",
+            "rdfs:label": "job"
+        },
+        {
+            "@id": "occ:jobTitle",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:jobType",
+            "rdfs:range": "rdf:Literal",
+            "rdfs:label": "Job Title"
+        },
+        {
+            "@id": "occ:task",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:jobType",
+            "rdfs:range": "rdf:Literal",
+            "rdfs:label": "Job Task"
+        },
+        {
+            "@id": "occ:codes",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:jobType",
+            "rdfs:range": "occ:codeType",
+            "rdfs:label": "Job Codes"
+        },
+        {
+            "@id": "occ:codeType",
+            "@type": "rdfs:Class",
+            "rdfs:label": "Occupational Code"
+        },
+        {
+            "@id": "occ:code",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:codeType",
+            "rdfs:range": "rdf:Literal",
+            "rdfs:label": "Code"
+        },
+        {
+            "@id": "occ:codeTitle",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:codeType",
+            "rdfs:range": "rdf:Literal",
+            "rdfs:label": "Title"
+        },
+        {
+            "@id": "occ:codingSystem",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:codeType",
+            "rdfs:range": "rdf:Literal",
+            "rdfs:label": "coding system"
+        },
+        {
+            "@id": "occ:score",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:codeType",
+            "rdfs:range": "xsd:float",
+            "rdfs:label": "Score"
+        },
+        {
+            "@id": "occ:coder",
+            "@type": "rdf:Property",
+            "rdfs:domain": "occ:codeType",
+            "rdfs:range": "rdf:Literal",
+            "rdfs:label": "Coder"
+        }
+    ]
+}
